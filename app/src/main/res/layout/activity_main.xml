@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.slowkakotlin.MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trening słówek"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/choiceTextView" />
+
+    <TextView
+        android:id="@+id/choiceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Wybierz język"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        app:layout_constraintBottom_toTopOf="@+id/gerButton"/>
+
+
+    <ImageView
+        android:id="@+id/engFlag"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/unitedkingdom"
+        app:layout_constraintBottom_toBottomOf="@+id/engButton"
+        app:layout_constraintEnd_toStartOf="@+id/engButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/engButton" />
+
+    <ImageView
+        android:id="@+id/gerFlag"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/germany"
+        app:layout_constraintBottom_toBottomOf="@+id/gerButton"
+        app:layout_constraintEnd_toStartOf="@+id/gerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gerButton" />
+
+    <ImageView
+        android:id="@+id/freflag"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/france"
+        app:layout_constraintBottom_toBottomOf="@+id/fraButton"
+        app:layout_constraintEnd_toStartOf="@id/fraButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fraButton" />
+
+    <Button
+        android:id="@+id/engButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FF99"
+        android:text="Angielski"
+        android:textColor="@color/my_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/engFlag"
+        app:layout_constraintBottom_toTopOf="@id/fraButton"
+        app:layout_constraintTop_toBottomOf="@id/gerButton"/>
+
+    <Button
+        android:id="@+id/gerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FF99"
+        android:text="Niemiecki"
+        android:textColor="@color/my_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceTextView"
+        app:layout_constraintStart_toEndOf="@id/gerFlag"
+        app:layout_constraintBottom_toTopOf="@id/engButton"/>
+
+    <Button
+        android:id="@+id/fraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FF99"
+        android:text="Francuski"
+        android:textColor="@color/my_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/freflag"
+        app:layout_constraintTop_toBottomOf="@id/engButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
